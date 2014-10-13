@@ -1,0 +1,27 @@
+{
+  "name": "all-your-base",
+  "version": "0.1.0",
+  "description": "convert from/to binary, hexadecimal, decimal values",
+  "keywords": [
+    "base converter",
+    "base",
+    "binary",
+    "hexadecimal",
+    "decimal" 
+  ],
+  "author": {
+    "name": "Rafael Espinoza",
+    "email": "rafael@rafaelespinoza.com",
+    "url": "http://www.rafaelespinoza.com"
+  },
+  "main": "./index.js",
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/nerddiffer/all-your-base" 
+  },
+  "devDependencies": {
+    "mocha": "*"
+  },
+  "preferGlobal": false,
+  "private": true
+}
