@@ -68,3 +68,49 @@ describe('hexToBin', function() {
     assert.equal('1010111010010001', hexToBin('AE91'));
   });
 });
+
+describe('binToOct', function() {
+  var binToOct = convert.binToOct;
+  it('should convert binary to octal', function() {
+    assert.equal('0614', binToOct('00110001100'));
+  });
+});
+
+describe('decToOct', function() {
+  var decToOct = convert.decToOct;
+  it('should convert decimal to octal', function() {
+    assert.equal('1573', decToOct(891));
+    assert.equal('143', decToOct(99));
+    assert.equal('553', decToOct(363));
+    assert.equal('12132', decToOct(5210));
+  });
+});
+
+describe('octToDec', function() {
+  var octToDec = convert.octToDec;
+  it('should convert octal to decimal', function() {
+    assert.equal('315', octToDec('473'));
+  });
+});
+
+describe('hexToOct', function() {
+  var hexToOct = convert.hexToOct;
+  it('should convert hexadecimal to octal', function() {
+    assert.equal('77763', hexToOct('7FF3'));
+    assert.equal('121336', hexToOct('A2DE'));
+  });
+});
+
+describe('octToBin', function() {
+  var octToBin = convert.octToBin;
+  it('should convert octal to binary', function() {
+    assert.equal('1100100', octToBin('144'));
+  });
+});
+
+describe('octToHex', function() {
+  var octToHex = convert.octToHex;
+  it('should convert octal to hexadecimal', function() {
+    assert.equal('E5', octToHex('345'));
+  });
+});

@@ -97,20 +97,115 @@ var hexToDec = function(hex) {
 
 /**
  * convert hexadecimal value to a binary value
+ * depends on decToBin & hexToDec
  * @param hex string the hexadecimal value
  * @return string the binary equivalent as a string
  */
 var hexToBin = function(hex) {
-  // 1) convert from hexadecimal to decimal
-  // 2) convert from decimal to binary
+  // convert from hexadecimal to decimal
+  // then convert from decimal to binary
   return decToBin(hexToDec(hex));
+};
+
+/**
+ * convert binary value to an octal value
+ * @param bin string the binary value
+ * @return integer the octal value
+ */
+var binToOct = function(bin) {
+  // group binary number into groups of 3
+  bin = scan(bin, 3);
+  // use binToOct table to convert each 3-part binary value to octal equivalent
+  return bin.map(function(val) {
+    return tables.binToOctTable[val];
+  }).join('');
+};
+
+/**
+ * convert decimal value to a octal value
+ * @param dec string the decimal value
+ * @return string the octal equivalent value as a string
+ */
+var decToOct = function(dec) {
+  var octArr = [];
+  var octVal;
+  while (dec > 0) {
+    // get modulus of dec & 16
+    // save it to hexadecimal notation
+    // add that to beginning of array
+    octArr.unshift(tables.decToHexTable[dec % 8]);
+    // get quotient of num and 16
+    dec = Math.floor(dec / 8);
+  }
+  return octArr.join('');
+};
+
+/**
+ * convert hexadecimal value to a octal value
+ * depends on binToOct & hexToBin
+ * @param hex string the hexadecimal value
+ * @return string the octal equivalent as a string
+ */
+var hexToOct = function(hex) {
+  // convert hexadecimal to binary
+  // then convert binary to octal
+  return binToOct(hexToBin(hex));
+};
+
+/**
+ * convert octal value to a decimal value
+ * @param oct string the octal value
+ * @return integer the decimal equivalent
+ */
+var octToDec = function(oct) {
+  // create an array of decimal equivalents
+  var octs = oct.split('').map(function(val) {
+    return parseInt(tables.hexToDecTable[val]);
+  });
+  // create array of the powers of base 8
+  var powers = makePowersOf(8, octs.length -1);
+  // for each value, multiply by the corresponding power of 8
+  // accumulate & return sum
+  return octs.reverse().reduce(function(sum, val, index) {
+    return sum + (powers[index] * val);
+  }, 0);
+};
+
+/**
+ * convert octal value to a binary value
+ * depends on decToBin & octToDec
+ * @param oct string the octal value
+ * @return string the binary equivalent as a string
+ */
+var octToBin = function(oct) {
+  // convert octal to decimal
+  // then convert decimal to binary
+  return decToBin(octToDec(oct));
+};
+
+/**
+ * convert octal value to a hexadecimal value
+ * dependes on binToHex & octToBin
+ * @param oct string the octal value
+ * @return string the hexadecimal equivalent as a string
+ */
+var octToHex = function(oct) {
+  // convert octal to binary
+  // then convert binary to hexadecimal
+  return binToHex(octToBin(oct));
 };
 
 module.exports = {
   binToDec: binToDec,
   binToHex: binToHex,
+  binToOct: binToOct,
   decToBin: decToBin,
   decToHex: decToHex,
+  decToOct: decToOct,
   hexToDec: hexToDec,
-  hexToBin: hexToBin
+  hexToBin: hexToBin,
+  hexToOct: hexToOct,
+  octToDec: octToDec,
+  octToBin: octToBin,
+  octToHex: octToHex,
 };

@@ -14,11 +14,11 @@ common utility functions & tables stored in `./src/x.js` and `./src/tables.js`
 ---
 
 ###todo:
-####introduce octal
-octal to {binary, decimal, hexadecimal}
-{binary, decimal, hexadecimal} to octal
-[binary to octal](http://www.wikihow.com/Convert-Binary-to-Octal-Number)
 ####type-checking
+
+function converting from decimal should accept integers
+all other functions should accept parameters as strings
+
 ---
 
 ###good links:
