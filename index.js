@@ -1,19 +1,16 @@
 var convert = require('./src/convert.js');
-var x = require('./src/x.js');
 
 module.exports = {
-  // export base conversion functions
   binToDec: convert.binToDec,
   binToHex: convert.binToHex,
+  binToOct: convert.binToOct,
   decToBin: convert.decToBin,
   decToHex: convert.decToHex,
+  decToOct: convert.decToOct,
   hexToDec: convert.hexToDec,
   hexToBin: convert.hexToBin,
-  // export 'x' utility functions
-  makePowersOf: x.makePowersOf,
-  getExponent: x.getExponent,
-  genPowersArray: x.genPowersArray,
-  reverseString: x.reverseString,
-  zeroPadding: x.zeroPadding,
-  scan: x.scan
+  hexToOct: convert.hexToOct,
+  octToDec: convert.octToDec,
+  octToBin: convert.octToBin,
+  octToHex: convert.octToHex,
 };
