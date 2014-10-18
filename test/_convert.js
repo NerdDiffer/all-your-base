@@ -49,6 +49,12 @@ describe('decToHex', function() {
 
 describe('hexToDec', function() {
   var hexToDec = convert.hexToDec;
+  it("should accept lower-case letters without error", function() {
+    assert.equal(44689, hexToDec('ae91'));
+    assert.equal(2014, hexToDec('7de'));
+    assert.equal(2500, hexToDec('9c4'));
+    assert.equal(16711709, hexToDec('ff001d'));
+  });
   it("should convert a hexadecimal number to a decimal number", function() {
     assert.equal(5462, hexToDec('1556'));
     assert.equal(44689, hexToDec('AE91'));
@@ -62,6 +68,11 @@ describe('hexToDec', function() {
 
 describe('hexToBin', function() {
   var hexToBin = convert.hexToBin;
+  it("should accept lower-case letters without error", function() {
+    assert.equal('11110', hexToBin('1e'));
+    assert.equal('100111000100', hexToBin('9c4'));
+    assert.equal('1010111010010001', hexToBin('ae91'));
+  });
   it("should convert a hexadecimal number to a binary number", function() {
     assert.equal('11110', hexToBin('1E'));
     assert.equal('100111000100', hexToBin('9C4'));
@@ -95,6 +106,10 @@ describe('octToDec', function() {
 
 describe('hexToOct', function() {
   var hexToOct = convert.hexToOct;
+  it("should accept lower-case letters without error", function() {
+    assert.equal('77763', hexToOct('7ff3'));
+    assert.equal('121336', hexToOct('a2de'));
+  });
   it('should convert hexadecimal to octal', function() {
     assert.equal('77763', hexToOct('7FF3'));
     assert.equal('121336', hexToOct('A2DE'));

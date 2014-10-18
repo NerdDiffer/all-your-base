@@ -84,6 +84,9 @@ var decToHex = function(dec) {
 var hexToDec = function(hex) {
   // create an array of decimal equivalents
   var decs = hex.split('').map(function(val) {
+    if (/[a-z]/.test(val)) {
+      val = val.replace(/[a-z]/, val.toUpperCase());
+    }
     return parseInt(tables.hexToDecTable[val]);
   });
   // create array of the powers of base 16
@@ -185,7 +188,7 @@ var octToBin = function(oct) {
 
 /**
  * convert octal value to a hexadecimal value
- * dependes on binToHex & octToBin
+ * depends on binToHex & octToBin
  * @param oct string the octal value
  * @return string the hexadecimal equivalent as a string
  */

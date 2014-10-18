@@ -23,13 +23,10 @@ to convert from any base *except for* decimal, pass in the value as a string
 ---
 
 ###todo:
-####type-checking
+####type-checking & error handling
 
 function converting from decimal should accept integers
 all other functions should accept parameters as strings
-
-####alphabetical case
-normalize case for values a-f. should be upper-case
 
 ####planned bases to support
 
