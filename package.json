@@ -1,6 +1,6 @@
 {
   "name": "all-your-base",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "convert from/to binary, hexadecimal, decimal values",
   "main": "./index.js",
   "keywords": [
@@ -24,8 +24,10 @@
     "mocha": "*"
   },
   "preferGlobal": false,
-  "private": false,
   "scripts": {
     "test": "mocha test/*.js"
+  },
+  "bin": {
+    "ayb": "./cli.js"
   }
 }
