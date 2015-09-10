@@ -1,10 +1,10 @@
-var x = require('./x.js');
+var h = require('./helpers.js');
 var tables = require('./tables.js');
 
-var makePowersOf = x.makePowersOf;
-var genPowersArray = x.genPowersArray;
-var zeroPadding = x.zeroPadding;
-var scan = x.scan;
+var makePowersOf = h.makePowersOf;
+var genPowersArray = h.genPowersArray;
+var zeroPadding = h.zeroPadding;
+var scan = h.scan;
 
 /**
  * convert binary value to a decimal value

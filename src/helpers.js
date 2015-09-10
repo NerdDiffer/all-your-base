@@ -85,7 +85,9 @@ var zeroPadding = function(val, width) {
 };
 
 /**
- * split a string into an array, then group the array values into groups of n-length
+ * split a string into an array
+ * then group the array values into groups of n-length
+ *
  * like a digraph or a trigraph, but n is any integer
  * remainders are padded with zeros from the left-hand side
  * @param str String the string to split up
