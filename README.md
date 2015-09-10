@@ -1,6 +1,6 @@
 Convert from one base to another
 
-#####Supported bases
+##### Supported bases
 
 | base/radix | name        | module's abbr. |
 |:-----------|:------------|:---------------|
@@ -9,38 +9,38 @@ Convert from one base to another
 | base 10    | decimal     | `dec`          |
 | base 16    | hexadecimal | `hex`          |
 
-##Installation
+## Installation
 
 `npm install all-your-base`
 
-##Usage
+## Usage
 
 Use this in your own scripts and/or as a stand-alone command-line tool.
 
-###From a script
+### From a script
 
 `decToBin(22);`  
 `hexToDec('10000');`  
 
-#####Parameter data types
+##### Parameter data types
 
 to convert from decimal, pass in a non-negative integer  
 to convert from any base *except for* decimal, pass in the value as a string
 
-###As command line tool
+### As command line tool
 
-#####Install as command line tool
+##### Install as command line tool
 
 `npm link` from your local repo's root. The executable is named `ayb`.
 
-#####From command line
+##### From command line
 
 `ayb decToBin 65536`  
 `ayb hexToDec FF001D`  
 
 ---
 
-###List of all operations
+### List of all operations
 
 Here's an exhaustive list for your reference.
 
@@ -72,7 +72,7 @@ Notice, the function name is lowerCamelCased.
 
 ---
 
-###Helpful links
+### Helpful links
 
 Learn more about different bases.  
 

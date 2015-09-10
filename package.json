@@ -1,33 +1,37 @@
 {
   "name": "all-your-base",
   "version": "0.2.0",
-  "description": "convert from/to binary, hexadecimal, decimal values",
+  "description": "convert from/to binary, octal, hexadecimal, decimal values",
+  "preferGlobal": false,
   "main": "./index.js",
+  "bin": {
+    "ayb": "./cli.js"
+  },
+  "scripts": {
+    "test": "mocha test/*.js"
+  },
   "keywords": [
     "base converter",
     "base",
     "binary",
     "hexadecimal",
     "decimal",
-    "octal"
+    "octal",
+    "converter",
+    "conversion",
+    "radix"
   ],
   "author": {
     "name": "Rafael Espinoza",
     "email": "rafael@rafaelespinoza.com",
     "url": "http://www.rafaelespinoza.com"
   },
+  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "http://github.com/nerddiffer/all-your-base" 
   },
   "devDependencies": {
     "mocha": "*"
-  },
-  "preferGlobal": false,
-  "scripts": {
-    "test": "mocha test/*.js"
-  },
-  "bin": {
-    "ayb": "./cli.js"
   }
 }
