@@ -1,6 +1,6 @@
 {
   "name": "all-your-base",
-  "version": "0.2.1",
+  "version": "0.3.0",
   "description": "convert from/to binary, octal, hexadecimal, decimal values",
   "preferGlobal": false,
   "main": "./index.js",
