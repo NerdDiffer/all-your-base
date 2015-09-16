@@ -5,7 +5,7 @@
   "preferGlobal": false,
   "main": "./index.js",
   "bin": {
-    "ayb": "./cli.js"
+    "ayb": "./bin/cli.js"
   },
   "scripts": {
     "test": "mocha test/*.js"
