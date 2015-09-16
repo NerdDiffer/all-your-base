@@ -28,6 +28,6 @@
     "test": "mocha test/*.js"
   },
   "bin": {
-    "ayb": "./cli.js"
+    "ayb": "./bin/cli.js"
   }
 }

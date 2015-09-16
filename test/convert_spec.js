@@ -32,6 +32,12 @@ describe('Conversion functions', function() {
       assert.equal(decToBin(55),  '110111');
       assert.equal(decToBin(11),  '1011');
     });
+    it('also accepts a string as an argument', function() {
+      assert.equal(decToBin('156'), '10011100');
+      assert.equal(decToBin('298'), '100101010');
+      assert.equal(decToBin('55'),  '110111');
+      assert.equal(decToBin('11'),  '1011');
+    });
   });
 
   describe('decToHex', function() {
@@ -45,6 +51,16 @@ describe('Conversion functions', function() {
       assert.equal(decToHex(1298), '512');
       assert.equal(decToHex(256), '100');
       assert.equal(decToHex(2500), '9C4');
+    });
+    it('also accepts a string as an argument', function() {
+      assert.equal(decToHex('317547'), '4D86B');
+      assert.equal(decToHex('677'), '2A5');
+      assert.equal(decToHex('79'), '4F');
+      assert.equal(decToHex('120'), '78');
+      assert.equal(decToHex('1728'), '6C0');
+      assert.equal(decToHex('1298'), '512');
+      assert.equal(decToHex('256'), '100');
+      assert.equal(decToHex('2500'), '9C4');
     });
   });
 
@@ -90,6 +106,12 @@ describe('Conversion functions', function() {
       assert.equal(decToOct(99), '143');
       assert.equal(decToOct(363), '553');
       assert.equal(decToOct(5210), '12132');
+    });
+    it('also accepts a string as an argument', function() {
+      assert.equal(decToOct('891'), '1573');
+      assert.equal(decToOct('99'), '143');
+      assert.equal(decToOct('363'), '553');
+      assert.equal(decToOct('5210'), '12132');
     });
   });
 
