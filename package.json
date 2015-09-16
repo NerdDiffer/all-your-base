@@ -28,6 +28,7 @@
     "test": "mocha test/*.js"
   },
   "bin": {
-    "ayb": "./bin/cli.js"
+    "ayb": "./bin/cli.js",
+    "parseRad": "./bin/parseRad.js"
   }
 }
